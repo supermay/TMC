@@ -7,7 +7,7 @@ get 'members' => 'members#index'
 get 'members/new' => 'members#new', as: :new_member
 get 'members/:id' => 'members#show', as: :member
 
-
+post 'members' => 'members#create'
 
 
 
@@ -17,7 +17,7 @@ get 'teams' => 'teams#index'
 get 'teams/new' => 'teams#new', as: :new_team
 get 'teams/:id' => 'teams#show', as: :team
 
-
+post 'teams' => 'teams#create'
 
 
 # Score
@@ -25,7 +25,7 @@ get 'scores' => 'scores#index'
 get 'scores/new' => 'scores#new', as: :new_score
 get 'scores/:id' => 'scores#show', as: :score
 
-
+post 'scores' => 'scores#create'
 
 
 end

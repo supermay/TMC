@@ -18,8 +18,12 @@
 #   t.datetime "created_at", null: false
 #   t.datetime "updated_at", null: false
 # end
+Member.delete_all
+Team.delete_all
+Score.delete_all
 
-score1 = Score.create!({concept: 10, style: 10, git: 10, user_friendly: 10})
+
+score1 = Score.create!({concept: 0, style: 0, git: 0, user_friendly: 0})
 
 team1 = Team.create!({name: "Best", description: "This is the best team.", code_link: "https://github.com/supermay/TMC.git", logo:"http://localhost:3000/assets/best.png", score: score1})
 

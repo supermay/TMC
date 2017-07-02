@@ -12,6 +12,9 @@
   <%= f.label :captain %>
   <%= f.check_box :capitain %>
 <br />
+  <%= f.label :team %>
+  <%= f.collection_select(:team_id, Team.all, :id, :name) %>
+<br />
 
   <%= f.submit %>
 <% end %>
