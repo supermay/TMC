@@ -1,0 +1,21 @@
+<h2>Team Information</h2>
+
+<ul>
+  <li>Team Name: <%= @team.name %></li>
+  <li>Team Logo: <%= image_tag @team.logo %></li>
+  <li>Project Description: <%= @team.description %></li>
+  <li>Github Link: <%= @team.code_link %></li>
+
+</ul>
+
+<!--
+create_table "teams", force: :cascade do |t|
+  t.string "name"
+  t.string "description"
+  t.string "code_link"
+  t.string "logo"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.bigint "score_id"
+  t.index ["score_id"], name: "index_teams_on_score_id"
+end -->

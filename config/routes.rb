@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 # Member
 get 'members' => 'members#index'
+get 'members/:id' => 'members#show', as: :member
 
 
 
@@ -12,14 +13,14 @@ get 'members' => 'members#index'
 
 # Team
 get 'teams' => 'teams#index'
-
+get 'teams/:id' => 'teams#show', as: :team
 
 
 
 
 # Score
 get 'scores' => 'scores#index'
-
+get 'scores/:id' => 'scores#show', as: :score
 
 
 
