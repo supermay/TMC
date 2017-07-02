@@ -1,0 +1,14 @@
+<h1>List of Teams</h1>
+
+<ul>
+
+    <% @teams.each do |team|  %>
+    <li>
+      <%= team.name %>
+      <br / >
+      <%= image_tag team.logo %>
+    </li>
+
+
+  <% end %>
+</ul>

@@ -1,0 +1,10 @@
+<h1>List of Scores</h1>
+<% @scores.each do |score| %>
+<p>Finaly Score:
+
+<%= score.concept + score.style + score.git + score.user_friendly %>
+
+
+</p>
+
+<% end %>
