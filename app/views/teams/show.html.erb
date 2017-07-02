@@ -5,22 +5,31 @@
   <li>Team Logo: <%= image_tag @team.logo %></li>
   <li>Project Description: <%= @team.description %></li>
   <li>Github Link: <%= link_to @team.code_link, @team.code_link %></li>
-  <li><%= link_to 'Score' %></li>
+
+
+  <li>
+    List of members:
+    <% if @team.members.any? %>
+      <ul>
+        <% @team.members.each do |member| %>
+          <li><%= link_to member.name, member_path(member.id) %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>There are not any members in this team yet.</p>
+    <% end %>
+  </li>
+
+  <li><%= link_to 'Check Scores', score_path(@team.score.id) %></li>
 </ul>
 
 
+
+
+
+<hr />
 <%= link_to 'Edit', edit_team_path(@team.id) %>
 <%= link_to 'Delete', team_path(@team.id), method: :delete, data: {confirm: "Are you sure?"}  %>
 
-
-<!--
-create_table "teams", force: :cascade do |t|
-  t.string "name"
-  t.string "description"
-  t.string "code_link"
-  t.string "logo"
-  t.datetime "created_at", null: false
-  t.datetime "updated_at", null: false
-  t.bigint "score_id"
-  t.index ["score_id"], name: "index_teams_on_score_id"
-end -->
+<hr />
+<%= link_to 'Back', teams_path %>

@@ -1,6 +1,9 @@
 <h2>Score Information</h2>
 
-<h4>Total: <%= @score.concept + @score.style + @score.git + @score.user_friendly %></h4>
+
+<h3>Team Name: <%= link_to @score.team.name, team_path(@score.team.id)  %></h3>
+
+<h4>Total Score: <%= @score.concept + @score.style + @score.git + @score.user_friendly %></h4>
 
 <ul>
   <li>Concept: <%= @score.concept  %></li>
@@ -9,4 +12,7 @@
   <li>User Friendly: <%= @score.user_friendly%></li>
 </ul>
 
+<hr />
 <%= link_to 'Edit', edit_score_path(@score.id) %>
+<hr />
+<%= link_to 'Check List of Scores', scores_path %>

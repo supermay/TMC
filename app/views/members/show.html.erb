@@ -6,9 +6,14 @@
   <li>Email Address: <%= mail_to @member.email_address %></li>
   <li>Position: <%= "Team member" if @member.capitain; "Captain" %>
   </li>
-  <li><%= link_to 'Team:' %></li>
+  <li>Team: <%= link_to "#{@member.team.name}", team_path(@member.team.id) %>
+
+
+  </li>
 </ul>
 
 <hr />
 <%= link_to 'Edit', edit_member_path(@member.id) %>
 <%= link_to 'Delete', member_path(@member.id), method: :delete, data:{confirm: "Are you sure?" } %>
+<hr />
+<%= link_to 'Back', members_path %>
