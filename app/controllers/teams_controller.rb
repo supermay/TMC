@@ -7,7 +7,12 @@ end
 
 def show
   @team = Team.find(params[:id])
+end
+
+def new
+  @team = Team.new
 end 
+
 
 
 end

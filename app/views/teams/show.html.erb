@@ -4,7 +4,7 @@
   <li>Team Name: <%= @team.name %></li>
   <li>Team Logo: <%= image_tag @team.logo %></li>
   <li>Project Description: <%= @team.description %></li>
-  <li>Github Link: <%= @team.code_link %></li>
+  <li>Github Link: <%= link_to @team.code_link, @team.code_link %></li>
   <li><%= link_to 'Score' %></li>
 </ul>
 
