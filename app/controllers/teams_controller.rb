@@ -14,10 +14,10 @@ def new
 end
 
 def create
-  score1 = Score.create!({concept: 0, style: 0, git: 0, user_friendly: 0})
+  score = Score.create!({concept: 0, style: 0, git: 0, user_friendly: 0})
 
   @team = Team.new(team_params)
-  @team.score = score1
+  @team.score = score
 
   if @team.save
     redirect_to team_path(@team.id)

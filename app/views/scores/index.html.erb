@@ -4,14 +4,17 @@
 
 
 
-<p>
+<ul>
+  <li>
 
-  Team Name: <%= score.team %>
+  <b>Team Name:</b> <%= score.team.name %> &nbsp;
 
-  Final Score:<%= score.concept + score.style + score.git + score.user_friendly %>
+  <b>Final Score:</b><%= score.concept + score.style + score.git + score.user_friendly %>
 
   <%= link_to '(More information)', score_path(score.id) %>
 
-</p>
+  </li>
+
+</ul>
 
 <% end %>

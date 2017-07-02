@@ -1,14 +1,14 @@
 <h2>Team Information</h2>
 
+  <h3>Name: <%= @team.name %></h3>
 <ul>
-  <li>Team Name: <%= @team.name %></li>
-  <li>Team Logo: <%= image_tag @team.logo %></li>
+  <li>Logo: <%= image_tag @team.logo %></li>
   <li>Project Description: <%= @team.description %></li>
   <li>Github Link: <%= link_to @team.code_link, @team.code_link %></li>
 
 
   <li>
-    List of members:
+    Members:
     <% if @team.members.any? %>
       <ul>
         <% @team.members.each do |member| %>
@@ -18,9 +18,10 @@
     <% else %>
       <p>There are not any members in this team yet.</p>
     <% end %>
+    <%= link_to "(Add members?)", members_path  %>
   </li>
 
-  <li><%= link_to 'Check Scores', score_path(@team.score.id) %></li>
+  <li><%= link_to 'Check Final Score', score_path(@team.score.id) %></li>
 </ul>
 
 
@@ -28,8 +29,6 @@
 
 
 <hr />
-<%= link_to 'Edit', edit_team_path(@team.id) %>
-<%= link_to 'Delete', team_path(@team.id), method: :delete, data: {confirm: "Are you sure?"}  %>
-
-<hr />
-<%= link_to 'Back', teams_path %>
+<%= link_to 'Edit This Team', edit_team_path(@team.id) %>
+<br />
+<%= link_to 'Delete This Team', team_path(@team.id), method: :delete, data: {confirm: "Are you sure?"}  %>
