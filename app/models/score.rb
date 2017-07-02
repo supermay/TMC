@@ -1,3 +1,4 @@
 class Score < ApplicationRecord
-  has_many :teams
+  has_one :team
+
 end

@@ -1,0 +1,20 @@
+<%= form_for @member do |f| %>
+<hr>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br />
+  <%= f.label :age %>
+  <%= f.number_field :age %>
+<br />
+  <%= f.label :Email_Address %>
+  <%= f.text_field :email_address %>
+<br />
+  <%= f.label :captain %>
+  <%= f.check_box :capitain %>
+<br />
+  <%= f.label :team %>
+  <%= f.collection_select(:team_id, Team.all, :id, :name) %>
+<br />
+
+  <%= f.submit %>
+<% end %>

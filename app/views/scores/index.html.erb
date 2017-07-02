@@ -1,10 +1,20 @@
 <h1>List of Scores</h1>
+
 <% @scores.each do |score| %>
-<p>Finaly Score:
 
-<%= score.concept + score.style + score.git + score.user_friendly %>
-<%= link_to'   (Score Information)', score_path(score.id) %>
 
-</p>
+
+<ul>
+  <li>
+
+  <b>Team Name:</b> <%= score.team.name %> &nbsp;
+
+  <b>Final Score:</b><%= score.concept + score.style + score.git + score.user_friendly %>
+
+  <%= link_to '(More information)', score_path(score.id) %>
+
+  </li>
+
+</ul>
 
 <% end %>

@@ -1,0 +1,18 @@
+<%= form_for @score do |f| %>
+<hr />
+<%= f.label :concept %>
+<%= f.number_field :concept %>
+<br />
+<%= f.label :style %>
+<%= f.number_field :style %>
+<br />
+<%= f.label :git %>
+<%= f.number_field :git %>
+<br />
+<%= f.label :user_friendly %>
+<%= f.number_field :user_friendly %>
+<br />
+<%= f.submit %>
+
+
+<% end %>

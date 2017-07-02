@@ -18,12 +18,12 @@
 #   t.datetime "created_at", null: false
 #   t.datetime "updated_at", null: false
 # end
+Member.delete_all
+Team.delete_all
+Score.delete_all
 
-score1 = Score.create!({concept: 10, style: 10, git: 10, user_friendly: 10})
 
-team1 = Team.create!({name: "Best", description: "This is the best team.", code_link: "https://github.com/supermay/TMC.git", logo:"http://localhost:3000/assets/best.png", score: score1})
 
-#
 # create_table "members", force: :cascade do |t|
 #   t.string "name"
 #   t.integer "age"
@@ -35,7 +35,7 @@ team1 = Team.create!({name: "Best", description: "This is the best team.", code_
 #   t.index ["team_id"], name: "index_members_on_team_id"
 # end
 
-member1 = Member.create!({name: "Jiamei", age: 25, email_address: "wu_jiamei@outlook.com", capitain: false, team: team1 })
+
 
 
 #

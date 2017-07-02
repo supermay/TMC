@@ -1,0 +1,17 @@
+<%= form_for @team do |f| %>
+<hr />
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br />
+<%= f.label :team_logo_link %>
+<%= f.text_field :logo %>
+<br />
+<%= f.label :Project_description %>
+<%= f.text_field :description %>
+<br />
+<%= f.label :github_link %>
+<%= f.text_field :code_link %>
+<br />
+<%= f.submit %>
+
+<% end %>
