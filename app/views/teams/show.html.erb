@@ -9,6 +9,9 @@
 </ul>
 
 
+<%= link_to 'Edit', edit_team_path(@team.id) %>
+<%= link_to 'Delete', team_path(@team.id), method: :delete, data: {confirm: "Are you sure?"}  %>
+
 
 <!--
 create_table "teams", force: :cascade do |t|

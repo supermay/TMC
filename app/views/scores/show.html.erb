@@ -8,3 +8,5 @@
   <li>Git: <%= @score.git %></li>
   <li>User Friendly: <%= @score.user_friendly%></li>
 </ul>
+
+<%= link_to 'Edit', edit_score_path(@score.id) %>

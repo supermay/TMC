@@ -18,7 +18,7 @@ def create
 
   @team = Team.new(team_params)
   @team.score = score1
-  
+
   if @team.save
     redirect_to team_path(@team.id)
   else
@@ -26,6 +26,26 @@ def create
   end
 end
 
+def edit
+  @team = Team.find(params[:id])
+end
+
+def update
+  @team = Team.find(params[:id])
+  if @team.update_attributes(team_params)
+    redirect_to team_path(@team.id)
+  else
+    render 'edit'
+  end
+end
+
+def destroy
+  @team = Team.find(params[:id])
+
+  @team.destroy
+
+  redirect_to teams_path
+end
 
 
 private

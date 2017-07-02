@@ -24,6 +24,20 @@ class ScoresController < ApplicationController
 
   end
 
+  def edit
+    @score = Score.find(params[:id])
+  end
+
+
+  def update
+    @score = Score.find(params[:id])
+    if @score.update_attributes(score_params)
+      redirect_to score_path(@score.id)
+    else
+      render 'edit'
+    end
+  end
+
 
 
   private
