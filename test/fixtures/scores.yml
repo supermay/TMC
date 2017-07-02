@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  concept: 1
+  style: 1
+  git: 1
+  user_friendly: 1
+
+two:
+  concept: 1
+  style: 1
+  git: 1
+  user_friendly: 1
