@@ -3,7 +3,15 @@
 
 <ul>
   <% @members.each do |member| %>
-    <p><%= member.name %></p>
+    <li>
+
+    <p><%= link_to member.name, member_path(member.id) %></p>
+
+
+
+
+
+    </li>
 
   <% end %>
 

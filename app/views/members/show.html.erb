@@ -3,9 +3,10 @@
 <ul>
   <li>Name: <%= @member.name %></li>
   <li>Age: <%= @member.age %></li>
-  <li>Email Address: <%= @member.email_address %></li>
+  <li>Email Address: <%= mail_to @member.email_address %></li>
   <li>Position: <%= team member if @member.capitain %>
   </li>
+  <li><%= link_to 'Team:' %></li>
 </ul>
 
 

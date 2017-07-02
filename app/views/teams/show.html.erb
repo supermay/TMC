@@ -5,8 +5,10 @@
   <li>Team Logo: <%= image_tag @team.logo %></li>
   <li>Project Description: <%= @team.description %></li>
   <li>Github Link: <%= @team.code_link %></li>
-
+  <li><%= link_to 'Score' %></li>
 </ul>
+
+
 
 <!--
 create_table "teams", force: :cascade do |t|
